@@ -20,6 +20,17 @@ export class ProduitsService {
       return p;
     }
   }
+
+  public addProduit(id: number, libelle:string):boolean
+  {
+   // const id = this.products[this.products.length-1].id +1;
+   // const p = new Produit(id,libelle );
+   if(this.getProduitByID(id)==null)
+      {this.products.push(new Produit(id, libelle));
+        return true;
+      }    
+      return false;
+  }
   constructor() { }
 
 }
