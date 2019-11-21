@@ -1,18 +1,20 @@
 import { Injectable } from '@angular/core';
+import { Produit } from './Produit';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProduitsService {
-  lesProduits =[
-    {id:1, nom:'téléphone', prix:300},
-    {id:2, nom:'pc', prix:1250},
-    {id:3, nom:'réveil', prix:18}
+  products =[
+    new Produit(15, 'montre'),
+    new Produit(32, 'cartable'),
+    new Produit(45, 'cahier'),
+    new Produit(96, 'tablier')
   ]
 
   public getProduitByID(id:number)
   {
-    for(let p of this.lesProduits)
+    for(let p of this.products)
     {
       if(p.id=== id)
       return p;
