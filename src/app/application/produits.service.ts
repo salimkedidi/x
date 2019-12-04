@@ -12,7 +12,7 @@ export class ProduitsService {
     new Produit(96, 'tablier')
   ]
 
-  public getProduitByID(id:number)
+  public getProduitByID(id:number):Produit
   {
     for(let p of this.products)
     {

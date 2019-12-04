@@ -1,12 +1,12 @@
 <br/>
 <h3>Ajout d'un produit</h3>
- <div [hidden]="submitted"> 
+ <div [hidden]="submitted" class="container"> 
     <form (ngSubmit)="onSubmit(f)" #f="ngForm">
         <div class="form-group">
             <label for="id">
                 Identifiant du produit
             </label>
-            <input type="number" id="id" name="id" [(ngModel)]="identifiant" #idf="ngModel" required >
+            <input type="number" id="id" name="id" [(ngModel)]="identifiant" #idf="ngModel" required class="form-control">
         </div>
            <!-- {{idf.className}}-->
         <div [hidden]="idf.valid||idf.pristine" class="alert alert-danger">
@@ -16,7 +16,7 @@
                 <label for="libelle">
                     Libellé du produit
                 </label>
-                <input type="text" id="libelle" name="lib" [(ngModel)]="libelle"  #lib="ngModel" required>
+                <input type="text" id="libelle" name="lib" [(ngModel)]="libelle"  #lib="ngModel" required class="form-control">
             </div>
 
            <br/>   
